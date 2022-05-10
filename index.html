@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Onda</title>
+</head>
+
+<body>
+    <main>
+        <div class="backWaves"></div>
+        <div class="frontWaves"></div>
+        <div class="polygons">
+
+            <div>
+                <a href="https://www.linkedin.com/in/ketrynsilva/"><button class="login">LinKedin</button></a>
+            </div>
+            <div class="center">
+                <a href="https://github.com/ketrynsdm"><button class="cadastro">GitHub</button></a>
+            </div>
+        </div>
+    </main>
+    <div id="svgTemplateWave" style="display: none;">
+        <svg class="wave" viewBox="0 0 600 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1.7613e-05 0.365387C120 -6.73794 163.279 92.0825 307.869 92.0825C452.459 92.0825 469.18 0.365402 600 0.365387C600 7.01509 600 99 600 99H1.7613e-05C1.7613e-05 99 -2.20162e-05 6.18352 1.7613e-05 0.365387Z" />
+            <path
+                d="M1.7613e-05 0.365387C120 -6.73794 163.279 92.0825 307.869 92.0825C452.459 92.0825 469.18 0.365402 600 0.365387C600 7.01509 600 99 600 99H1.7613e-05C1.7613e-05 99 -2.20162e-05 6.18352 1.7613e-05 0.365387Z" />
+        </svg>
+    </div>
+    <script>
+        const wave = document.querySelector("#svgTemplateWave > svg");
+        for (let i = 0; i < 2; i++) {
+            document.querySelector(".backWaves").appendChild(wave.cloneNode(true))
+            document.querySelector(".frontWaves").appendChild(wave.cloneNode(true))
+        }
+    </script>
+</body>
+
+</html>
